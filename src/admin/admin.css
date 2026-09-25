@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', system-ui, sans-serif; color: #282a28; background: #f4f2ed; font-synthesis: none; }
+body { margin: 0; min-width: 320px; background: #f4f2ed; }
+.font-serif { font-family: 'Libre Baskerville', Georgia, serif; }
+@layer components {
+  .input { @apply w-full border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 outline-none transition focus:border-[#be2b24] focus:ring-2 focus:ring-[#be2b24]/15; }
+  .btn { @apply inline-flex items-center justify-center gap-2 px-3.5 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-primary { @apply btn bg-[#be2b24] text-white hover:bg-[#8e201e]; }
+  .btn-ghost { @apply btn border border-stone-300 bg-white text-stone-700 hover:bg-stone-50; }
+  .btn-dark { @apply btn bg-[#282a28] text-white hover:bg-black; }
+  .label { @apply mb-1.5 block text-xs font-semibold text-stone-700; }
+}
+@keyframes drawer-in { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.drawer-in { animation: drawer-in .22s ease; }
