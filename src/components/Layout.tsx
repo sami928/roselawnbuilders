@@ -44,6 +44,7 @@ function Header() {
               ))}
             </div>
           </div>
+          <Link href="/portfolio">Our work</Link>
           <Link href="/about">About</Link>
           <a href={site.phoneHref} className="nav-phone">
             <Phone size={14} /> {site.phone}
@@ -81,6 +82,7 @@ function Footer() {
         </div>
         <div>
           <p className="footer-label">Company</p>
+          <Link href="/portfolio">Our work</Link>
           <Link href="/about">About {site.name}</Link>
           <Link href="/#estimate">Free estimate</Link>
           <a href={site.googleBusinessUrl} target="_blank" rel="noreferrer">

@@ -62,6 +62,16 @@ The one Node process serves the prerendered pages, the dashboard and the API. Le
 
 On the next `npm run build` it is prerendered and added to the sitemap. To add a whole service page, add an item to `src/content/services.ts`; its route, nav link, footer link and form option are all generated from that list. Use the `<LeadForm />` component to put the estimate form on any page.
 
+## Portfolio
+
+`/portfolio` is built from `src/content/portfolio.ts`. Each project has stages (e.g. Before → Demolition → Excavation), and each stage holds photos and videos.
+
+To add a project, put its media in `public/portfolio/<project-slug>/` and add an entry to `projects`:
+
+- **Photos:** a full-size JPEG (about 1400px on the long edge) plus a `-sm` version about 600px wide for the grid. Clicking a photo opens the lightbox.
+- **Videos:** H.264 MP4 with a `-poster.jpg` frame. Keep clips short and compressed (under about 3 MB each).
+- **Privacy:** phone photos and videos can carry GPS location and device details. Strip that metadata before adding files, for example `ffmpeg -i in.jpg -map_metadata -1 out.jpg`, and drop the audio from clips that may have captured conversations (`-an`).
+
 ## Editing content
 
 - **Business details** (phone, email, license, service areas): `src/site.ts`

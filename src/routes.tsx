@@ -6,6 +6,7 @@ import { HomePage } from '@/pages/HomePage';
 import { ServicesPage } from '@/pages/ServicesPage';
 import { ServicePage } from '@/pages/ServicePage';
 import { AboutPage } from '@/pages/AboutPage';
+import { PortfolioPage } from '@/pages/PortfolioPage';
 import { ThankYouPage } from '@/pages/ThankYouPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 
@@ -84,6 +85,15 @@ export const routes: PageRoute[] = [
       },
     ],
   })),
+  {
+    path: '/portfolio',
+    title: `Our Work: Past Projects in the Portland Area | ${site.name}`,
+    description: `Photos and video of past ${site.name} projects, from demolition and excavation to drainage and concrete repair, organized stage by stage.`,
+    Component: PortfolioPage,
+    priority: 0.8,
+    changefreq: 'monthly',
+    breadcrumbs: [{ name: 'Our work', path: '/portfolio' }],
+  },
   {
     path: '/about',
     title: `About ${site.name} | Portland, Oregon Contractor`,
