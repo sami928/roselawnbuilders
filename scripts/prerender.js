@@ -12,7 +12,7 @@ try {
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const clientDir = path.join(root, 'dist', 'client');
-const siteUrl = (process.env.SITE_URL || 'https://www.roselawnbuilders.com').replace(/\/+$/, '');
+const siteUrl = (process.env.SITE_URL || 'https://roselawnbuilders.si').replace(/\/+$/, '');
 
 const { render, pages, notFoundPath } = await import(pathToFileURL(path.join(root, 'dist', 'server', 'entry-server.js')).href);
 const template = fs.readFileSync(path.join(clientDir, 'index.html'), 'utf8');

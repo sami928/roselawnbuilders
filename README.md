@@ -36,7 +36,7 @@ npm run create-admin -- jane@roselawnbuilders.com 'a-long-password' Jane
 ## Production
 
 ```bash
-SITE_URL=https://www.yourdomain.com npm run build   # client build, SSR build, prerender
+SITE_URL=https://roselawnbuilders.si npm run build   # client build, SSR build, prerender
 npm start                                            # serves the site and API on $PORT
 ```
 
